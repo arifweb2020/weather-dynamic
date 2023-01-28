@@ -1,0 +1,11 @@
+.location {
+  & .date__time {
+    display: flex;
+    justify-content: center;
+  }
+
+  & .city {
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,19 @@
+.forecast_hrly {
+  & .timings {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  & .weather {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  & .degree {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

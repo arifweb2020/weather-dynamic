@@ -1,0 +1,30 @@
+.temp__details {
+  & .weather__condition {
+    display: flex;
+    justify-content: center;
+  }
+  & .weather__result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .weather__humid {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  & .weather__set {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (max-width: 667px) {
+    & .weather__set {
+      & .degree {
+        position: relative;
+        left: 33px;
+      }
+    }
+  }
+}

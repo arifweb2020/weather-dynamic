@@ -1,19 +1,31 @@
 .inputbox {
   & .innerbox {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 
-    & .searchbox{
-        border-radius: 0px;
-        height: 46px;
-        width: 240px;
+    & .searchbox {
+      border-radius: 0px;
+      height: 46px;
+      width: 365px;
+    }
+
+    @media (max-width: 667px) {
+      & .searchbox {
+        width: 234px;
+      }
+    }
+
+    & .cen__fen {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     & .icons_color {
       color: black;
       position: relative;
-      left: 246px;
-      top: -36px;
+      top: 10px;
+      left: 10px;
     }
   }
 }
