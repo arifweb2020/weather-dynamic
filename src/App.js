@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Header from './components/header/Header';
+import Inputbox from './components/inputbox/Inputbox';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container app">
+      <div className='row'>
+        <div className='col-md-12'>
+          <h1 className='text-center mt-2'>Weather App</h1>
+          <div className='inner__conatiner mt-5'>
+            <Header />
+            <Inputbox />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

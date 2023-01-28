@@ -1,0 +1,13 @@
+.inputbox {
+  & .innerbox {
+    display: flex;
+    justify-content: space-evenly;
+
+    & .icons_color {
+      color: black;
+      position: relative;
+      left: 216px;
+      top: -33px;
+    }
+  }
+}
