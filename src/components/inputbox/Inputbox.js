@@ -8,7 +8,7 @@ function Inputbox(props) {
             <div className='innerbox'>
                 <div>
                     <form>
-                        <input type="text" className='form-control' />
+                        <input type="text" className='form-control searchbox' />
                     </form>
                     <UilSearch
                         size={25}
@@ -22,7 +22,7 @@ function Inputbox(props) {
                     />
                 </div>
                 <div>
-                <p>test</p>
+                    <span>°C</span> | <span>°F</span>
                 </div>
             </div>
 

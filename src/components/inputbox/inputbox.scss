@@ -3,11 +3,17 @@
     display: flex;
     justify-content: space-evenly;
 
+    & .searchbox{
+        border-radius: 0px;
+        height: 46px;
+        width: 240px;
+    }
+
     & .icons_color {
       color: black;
       position: relative;
-      left: 216px;
-      top: -33px;
+      left: 246px;
+      top: -36px;
     }
   }
 }

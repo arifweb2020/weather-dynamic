@@ -8,7 +8,7 @@ function App() {
       <div className='row'>
         <div className='col-md-12'>
           <h1 className='text-center mt-2'>Weather App</h1>
-          <div className='inner__conatiner mt-5'>
+          <div className='inner__container mt-5'>
             <Header />
             <Inputbox />
           </div>
