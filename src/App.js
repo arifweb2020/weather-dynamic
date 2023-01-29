@@ -1,5 +1,5 @@
 import './App.scss';
-import getFormattedWeatherData from './common/data/api/url';
+import getFormattedWeatherData, { getWeatherData } from './common/data/api/url';
 import Forecast from './components/forecast/Forecast';
 import Header from './components/header/Header';
 import Inputbox from './components/inputbox/Inputbox';
@@ -15,11 +15,12 @@ function App() {
   const [units, setUnits] = useState("metric");
   const [weather, setWeather] = useState(null);
   console.log("units")
-  // const getWeather = async () => {
-  //   const data = await getWeatherData('weather', { q: 'mumbai' })
-  //   console.log(data)
-  // }
-  // getWeather()
+  // getWeather func for testing pupose
+  const getWeather = async () => {
+    const data = await getWeatherData('weather', { q: 'mumbai' })
+    console.log("test", data)
+  }
+  getWeather()
 
   useEffect(() => {
     const fetchWeather = async () => {
