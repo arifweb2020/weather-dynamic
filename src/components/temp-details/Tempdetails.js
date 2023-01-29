@@ -40,21 +40,18 @@ function Tempdetails({
                 </div>
                 <div className='weather_humid'>
                     <p> <UilWind size={18} className="mr-1" />
-                        Wind:
-                        <span className="font-medium ml-1">{`${speed.toFixed()} km/h`}</span>
+                        Wind: <span className="font-medium ml-1">{`${speed.toFixed()} km/h`}</span>
                     </p>
                     <p> <UilTear size={18} className="mr-1" />
-                        Humidity:
-                        <span className="font-medium ml-1">{`${humidity.toFixed()}%`}</span>
+                        Humidity: <span className="font-medium ml-1">{`${humidity.toFixed()}%`}</span>
                     </p>
                     <p> <UilTemperature size={18} className="mr-1" />
-                        Real fell:
-                        <span className="font-medium ml-1">{`${feels_like.toFixed()}°`}</span>
+                        Real fell: <span className="font-medium ml-1">{`${feels_like.toFixed()}°`}</span>
                     </p>
                 </div>
             </div>
-            <div className='weather__set mt-3'>
-                <div>
+            <div className='row weather__sets mt-3'>
+                <div className='col-6 col-md-3'>
                     <p>
                         <UilSun />  Rise:{" "}
                         <span className="font-medium ml-1">
@@ -62,24 +59,24 @@ function Tempdetails({
                         </span>
                     </p>
                 </div>
-                <div>
-                    <p>
+                <div className='col-6 col-md-3'>
+                    <p style={{textAlign:'right'}}>
                         <UilSunset />  Set:{" "}
                         <span className="font-medium ml-1">
                             {formatToLocalTime(sunset, timezone, "hh:mm a")}
                         </span>
                     </p>
                 </div>
-                <div>
-                    <p>
+                <div className='col-6 col-md-3'>
+                    <p className='high__move'>
                         <UilArrowUp />  High:{" "}
                         <span className="degree">
                             <span className="font-medium ml-1">{`${temp_max.toFixed()}°`}</span>
                         </span>
                     </p>
                 </div>
-                <div>
-                    <p>
+                <div className='col-6 col-md-3'>
+                    <p className='low__move'>
                         <UilArrowDown />  Low:{" "}
                         <span className="degree">
                             <span className="font-medium ml-1">{`${temp_min.toFixed()}°`}</span>

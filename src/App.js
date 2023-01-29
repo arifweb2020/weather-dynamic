@@ -23,9 +23,9 @@ function App() {
 
   useEffect(() => {
     const fetchWeather = async () => {
-      const message = query.q ? query.q : "current location.";
+      // const message = query.q ? query.q : "current location.";
 
-      toast.info("Fetching weather for " + message);
+      // toast.info("Fetching weather for " + message);
 
       await getFormattedWeatherData({ ...query, units }).then((data) => {
         toast.success(
@@ -39,11 +39,12 @@ function App() {
     fetchWeather();
   }, [query, units]);
 
+
   const formatBackground = () => {
     if (!weather) return "#000";
     const threshold = units === "metric" ? 20 : 60;
     if (weather.temp <= threshold) return "#000";
-    return "#ff5722";
+    return "#3f51b";
   };
 
 
@@ -52,7 +53,7 @@ function App() {
       <div className="container app">
         <div className='row'>
           <div className='col-md-12'>
-            <h1 className='text-center mt-2'>Check Weather</h1>
+            <h1 className='text-center mt-4'>Check Weather</h1>
             <div className='inner__container mt-5'>
               <Header setQuery={setQuery} />
               <Inputbox setQuery={setQuery} units={units} setUnits={setUnits} />
@@ -66,6 +67,7 @@ function App() {
           </div>
         </div>
       </div>
+      <h3 className='text-center mt-3'>Made by Arif</h3>
       <ToastContainer autoClose={5000} theme="colored" newestOnTop={true} />
     </div>
   );

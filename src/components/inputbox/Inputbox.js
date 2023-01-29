@@ -6,10 +6,11 @@ import { toast } from "react-toastify";
 function Inputbox({ setQuery, units, setUnits }) {
     const [city, setCity] = useState("");
 
-    const handleUnitsChange = (e) => {
-        const selectedUnit = e.currentTarget.name;
-        if (units !== selectedUnit) setUnits(selectedUnit);
-    };
+    // const handleUnitsChange = (e) => {
+    //     console.log(e.currentTarget.name)
+    //     const selectedUnit = e.currentTarget.name;
+    //     if (units !== selectedUnit) setUnits(selectedUnit);
+    // };
 
     const handleSearchClick = () => {
         if (city !== "") setQuery({ q: city });
@@ -18,7 +19,7 @@ function Inputbox({ setQuery, units, setUnits }) {
 
     const handleLocationClick = () => {
         if (navigator.geolocation) {
-            toast.info("Fetching users location.");
+          //  toast.info("Fetching users location.");
             navigator.geolocation.getCurrentPosition((position) => {
                 toast.success("Location fetched!");
                 let lat = position.coords.latitude;
@@ -41,9 +42,9 @@ function Inputbox({ setQuery, units, setUnits }) {
                         onChange={(e) => setCity(e.currentTarget.value)}
                         placeholder="Enter city...."
                         className='form-control searchbox' />
-                    <div className='cen__fen'>
-                        <span onClick={handleUnitsChange} style={{ cursor: 'pointer' }}>°C </span> | <span onClick={handleUnitsChange} style={{ cursor: 'pointer' }}>°F </span>
-                    </div>
+                    {/* <div className='cen__fen'>
+                        <span name="metric" onClick={handleUnitsChange} style={{ cursor: 'pointer' }}>°C </span> | <span onClick={handleUnitsChange} style={{ cursor: 'pointer' }} name="imperial">°F </span>
+                    </div> */}
                 </div>
 
                 <UilSearch

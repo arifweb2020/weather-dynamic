@@ -18,13 +18,26 @@
     justify-content: space-between;
     align-items: center;
   }
-
-  @media (max-width: 667px) {
+  & .high__move {
+    text-align: right;
+  }
+  & .low__move {
+    text-align: right;
+  }
+  @media (max-width: 800px) {
     & .weather__set {
       & .degree {
         position: relative;
         left: 33px;
       }
+    }
+    & .high__move {
+      text-align: left;
+    }
+    & .low__move {
+      text-align: right;
+      position: absolute;
+      right: 55px;
     }
   }
 }

@@ -5,11 +5,12 @@
 }
 
 .main__container{
-  // background: aliceblue;
+  padding-bottom: 60px;
+  min-height: 100vh;
   & .app{
     max-width: 800px;
     margin: 0 auto;
-    padding-bottom: 60px;
+  
   }
   h1,h2,h3,p,span{
     color: #fff;
