@@ -11,7 +11,7 @@ import { useState, useEffect } from 'react';
 
 function App() {
 
-  const [query, setQuery] = useState({ q: "berlin" });
+  const [query, setQuery] = useState({ q: "bengaluru" });
   const [units, setUnits] = useState("metric");
   const [weather, setWeather] = useState(null);
   console.log("units")

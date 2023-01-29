@@ -8,7 +8,7 @@ const ENDPOINT = "https://api.openweathermap.org/data/2.5";
 const getWeatherData = (infoType, searchParams) => {
     const url = new URL(ENDPOINT + "/" + infoType);
     url.search = new URLSearchParams({ ...searchParams, appid: API_KEY });
-  //  console.log("url ", url)
+    console.log("url ", url)
     return fetch(url).then((res) => res.json());
 };
 
