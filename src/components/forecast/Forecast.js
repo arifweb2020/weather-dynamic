@@ -1,29 +1,31 @@
 import React from 'react';
+import { iconUrlFromCode } from '../../common/data/api/url';
 import './hourly.scss'
 
-function Forecast({heading}) {
+function Forecast({ heading, items }) {
     return (
         <div className='forecast_hrly'>
             <div className='heading'>
                 <h3>{heading}</h3>
-                <hr/>
+                <div style={{border:'2px solid darkorange'}}></div>
             </div>
+
             <div className='timings mt-2'>
-                <p>12:00 PM</p>
-                <p>12:00 PM</p>
-                <p>12:00 PM</p>
-                <p>12:00 PM</p>
-                <p>12:00 PM</p>
+                {items?.map((ele, i) => {
+                    return <p key={i}>{ele.title}</p>
+                })}
             </div>
             <div className='weather'>
-                <img src="" alt="icons" />
+                {items?.map((ele, i) => {
+                    return <img src={iconUrlFromCode(ele.icon)} alt="weather-icon" className='forecast__img' />
+                })}
             </div>
             <div className='degree'>
-                <p>89°</p>
-                <p>89°</p>
-                <p>89°</p>
-                <p>89°</p>
-                <p>89°</p>
+                {items?.map((ele, i) => {
+                    return <p key={i}>{`${ele.temp.toFixed()}°`}</p>
+                })}
+
+
             </div>
         </div>
     );

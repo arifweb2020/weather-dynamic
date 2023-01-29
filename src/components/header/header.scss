@@ -3,5 +3,15 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    & p {
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    & p:hover{
+      font-weight: bold;
+      color: darkorange;
+    }
   }
 }

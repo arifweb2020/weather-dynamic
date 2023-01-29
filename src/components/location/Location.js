@@ -1,14 +1,15 @@
 import React from 'react';
+import { formatToLocalTime } from '../../common/data/api/url';
 import './location.scss'
 
-function Location(props) {
+function Location({ weather: { dt, timezone, name, country } }) {
     return (
         <div className='location'>
              <div className='date__time'>
-               <p>Friday, 31 Aug 2022 | local time 11:24 AM</p>
+               <p>{formatToLocalTime(dt, timezone)}</p>
              </div>
              <div className='city'>
-               <h2>Bengaluru, In</h2>
+               <h2>{`${name}, ${country}`}</h2>
              </div>
         </div>
     );
